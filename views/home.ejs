@@ -1,0 +1,19 @@
+<%- include("partials/header") -%>
+
+<h1>HOME</h1>
+<p><%= start %></p>
+
+<% items.forEach(function(i) { %>
+    <h2><%= i.title %></h2>
+    <p>
+        <% if(i.description.length > 100){ %>
+            <%= i.description.substring(0,100) + "..." %>
+            <a href="/posts/<%= i.title %>">Read more</a>
+        <% } else{ %>
+            <%= i.description + " . " %>
+            <a href="/posts/<%= i.title %>">Read post</a>
+        <% } %>
+    </p>
+<% }); %>
+
+<%- include("partials/footer") -%>
