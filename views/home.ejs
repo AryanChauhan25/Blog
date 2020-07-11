@@ -1,19 +1,20 @@
 <%- include("partials/header") -%>
 
-<h1>HOME</h1>
-<p><%= start %></p>
-
-<% items.forEach(function(i) { %>
-    <h2><%= i.title %></h2>
-    <p>
-        <% if(i.description.length > 100){ %>
-            <%= i.description.substring(0,100) + "..." %>
-            <a href="/posts/<%= i.title %>">Read more</a>
-        <% } else{ %>
-            <%= i.description + " . " %>
-            <a href="/posts/<%= i.title %>">Read post</a>
-        <% } %>
-    </p>
-<% }); %>
-
+<div class="blogPosts">
+    <h1>BLOGS</h1>
+    <br><br><br>
+    <% blogs.forEach(function(i) { %>
+        <h2><%= i.title %></h2>
+        <br>
+        <p>
+            <% if(i.description.length > 100){ %>
+                <%= i.description.substring(0,100) + "..." %>
+                <a href="/blogs/<%= i._id %>">Read more</a>
+            <% } else{ %>
+                <%= i.description + " . " %>
+                <a href="/blogs/<%= i._id %>">Read post</a>
+            <% } %>
+        </p>
+    <% }); %>
+</div>
 <%- include("partials/footer") -%>

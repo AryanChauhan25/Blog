@@ -1,6 +1,8 @@
 <%- include("partials/header") -%>
 
+<div class="blogPosts">
     <h1>Compose</h1>
+    <br>
     <form action="/compose" method="POST">
         <div class="form-group">
             <label for="blog">Title</label>
@@ -10,5 +12,6 @@
         </div>
         <button type="submit" name="button" class="btn btn-primary">Publish</button>
     </form>
+</div>
 
 <%- include("partials/footer") -%>

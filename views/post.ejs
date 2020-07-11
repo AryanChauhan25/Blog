@@ -1,6 +1,13 @@
 <%- include("partials/header") -%>
 
-<h1><%= blogTitle %></h1>
-<p><%= blogDes %></p>
+<div class="blogPosts">
+	<form action="/delete" method="POST">
+		<h1><%= blogTitle %></h1>
+		<br>
+		<p><%= blogDes %></p>
+		<button class="btn btn-danger btn-sm" type="submit" name="deleteBlog">Delete Blog</button>
+		<input type="hidden" name="blogName" value="<%= blogTitle %>"></input>
+	</from>
+</div>
 
 <%- include("partials/footer") -%>
