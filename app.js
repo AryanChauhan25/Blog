@@ -7,8 +7,8 @@ const _ = require("lodash");
 
 const aboutContent = "This is a blog post website. You can create as much blogs and save it. We create an anime plot named (One Piece) on the home page. Your blogs are appeared after that post. The owner of this website is Mr.Aryan Chauhan.";
 const contactContent = "Email - thakursaharsh8000@gmail.com";
-// mongoose.connect("mongodb+srv://atlas-levi25:test25012001@todo-list.vw2ki.mongodb.net/blogDB", {useNewUrlParser: true});
-mongoose.connect("mongodb://localhost:27017/blogDB", {useNewUrlParser: true, useFindAndModify: false, useUnifiedTopology: true});
+mongoose.connect("mongodb+srv://atlas-levi25:test25012001@todo-list.vw2ki.mongodb.net/blogDB", {useNewUrlParser: true, useFindAndModify: false, useUnifiedTopology: true});
+// mongoose.connect("mongodb://localhost:27017/blogDB", {useNewUrlParser: true, useFindAndModify: false, useUnifiedTopology: true});
 const app = express();
 
 app.set('view engine', 'ejs');
